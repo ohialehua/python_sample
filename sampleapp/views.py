@@ -4,6 +4,6 @@ from .models import SampleAppModel
 
 # Create your views here.
 
-class SampleAppTest(ListView):
-    template_name = 'test.html'
+class SampleAppList(ListView):
+    template_name = 'list.html'
     model = SampleAppModel
