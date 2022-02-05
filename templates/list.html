@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>はじめてのPython</title>
-    </head>
-    <body>
-        <h1>Djangoで新しいページ作成</h1>
-    </body>
-</html>
+{% for item in object_list %}
+{{ item.itemname }}
+{{ item.itemvalue }}
+{% endfor %}
