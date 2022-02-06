@@ -1,3 +1,5 @@
+
+<h3>for文でのデータの呼び出し</h3>
 {% for item in object_list %}
   <ul>
     <li>{{ item.itemname }}</li>
@@ -5,6 +7,7 @@
   </ul>
 {% endfor %}
 
+<h3>for if 文</h3>
 {% for item in object_list %}
   <ul>
     <li>{{ item.itemname }}</li>
@@ -16,5 +19,18 @@
     <li style="list-style-type: none;">{{forloop.counter}}番目に登録された商品です</li><br>
   {% endif %}
   </ul>
+{% endfor %}
+
+{% for i in ''|center:10 %}
+  <h4>{{forloop.counter}}</h4>
+  {% if forloop.first %}
+    <h5>最初の数字です</h5>
+  {% elif forloop.last %}
+    <h5>最後の数字です</h5>
+  {% elif forloop.counter == 5 %}
+    <h5>中央値です</h5>
+  {% else %}
+    <h5>この数は{{forloop.counter}}です</h5>
+  {% endif %}
 {% endfor %}
 <h3>FINISH !!</h3>
