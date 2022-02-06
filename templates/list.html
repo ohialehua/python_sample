@@ -4,3 +4,15 @@
     <li>{{ item.itemvalue }}</li>
   </ul>
 {% endfor %}
+
+{% for item in object_list %}
+  <li>{{ item.itemname }}</li>
+  {% if forloop.first %}
+    <li>最初に登録した商品です</li>
+  {% elif forloop.last %}
+    <li>最後に登録した商品です</li>
+  {% else %}
+    <li>{{forloop.counter}}番目に登録された商品です</li>
+  {% endif %}
+{% endfor %}
+<h3>FINISH !!</h3>
