@@ -1,18 +1,20 @@
 {% for item in object_list %}
   <ul>
     <li>{{ item.itemname }}</li>
-    <li>{{ item.itemvalue }}</li>
+    <li style="list-style-type: none;">{{ item.itemvalue }}</li>
   </ul>
 {% endfor %}
 
 {% for item in object_list %}
-  <li>{{ item.itemname }}</li>
+  <ul>
+    <li>{{ item.itemname }}</li>
   {% if forloop.first %}
-    <li>最初に登録した商品です</li>
+    <li style="list-style-type: none;">最初に登録した商品です</li><br>
   {% elif forloop.last %}
-    <li>最後に登録した商品です</li>
+    <li style="list-style-type: none;">最後に登録した商品です</li><br>
   {% else %}
-    <li>{{forloop.counter}}番目に登録された商品です</li>
+    <li style="list-style-type: none;">{{forloop.counter}}番目に登録された商品です</li><br>
   {% endif %}
+  </ul>
 {% endfor %}
 <h3>FINISH !!</h3>
