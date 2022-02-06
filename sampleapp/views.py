@@ -7,4 +7,3 @@ from .models import SampleAppModel
 class SampleAppList(ListView):
     template_name = 'list.html'
     model = SampleAppModel
-    for_range = [i for i in range(10)]
